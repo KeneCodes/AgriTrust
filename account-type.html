@@ -10,7 +10,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/CSS/shared.css" />
+    <link rel="stylesheet" href="/CSS/auth.css" />
+
     <title>AgriTrust</title>
   </head>
   <body>
@@ -20,7 +22,9 @@
       <section class="left-side">
         <!-- logo -->
 
-        <div class="logo">AgriTrust</div>
+        <a href="/index1.html" class="logo"
+          ><img src="#" /> <span>AgriTrust</span></a
+        >
 
         <div class="content">
           <!-- heading -->
@@ -45,7 +49,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -62,7 +66,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -79,7 +83,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -96,7 +100,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -113,7 +117,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -121,7 +125,7 @@
                   d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
                 />
               </svg>
-              Dedicated Support For Individuals, Companies and Cooperatives.
+              Dedicated Support For All.
             </div>
           </div>
         </div>
@@ -143,7 +147,7 @@
             Choose your primary role. You can always change this later.
           </p>
 
-          <div class="account-type-card">
+          <div id="individual-card" class="account-type-card">
             <div class="account">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +155,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="account-type--icon"
+                class="account-type-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -170,7 +174,7 @@
             </div>
           </div>
 
-          <div class="account-type-card">
+          <div id="cooperative-card" class="account-type-card">
             <div class="account">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +182,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="account-type--icon"
+                class="account-type-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -191,14 +195,14 @@
                 <h3>Cooperative</h3>
                 <p>
                   Purchase quality agricultural products on behalf of a farming
-                  or community groupwith simplified bulk order management.
+                  or community group with simplified bulk order management.
                 </p>
               </div>
-              <input type="radio" name="role" value="company" />
+              <input type="radio" name="role" value="cooperative" />
             </div>
           </div>
 
-          <div class="account-type-card">
+          <div id="company-card" class="account-type-card">
             <div class="account">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +210,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="account-type--icon"
+                class="account-type-icon"
               >
                 <path
                   stroke-linecap="round"
@@ -226,9 +230,18 @@
             </div>
           </div>
 
-          <button class="btn continue--btn">Continue &rarr;</button>
+          <p id="account-error" class="error-message"></p>
+
+          <button
+            type="submit"
+            id="account-continue-btn"
+            class="btn continue--btn"
+          >
+            Continue &rarr;
+          </button>
         </div>
       </section>
     </main>
+    <script src="/JS/auth.js"></script>
   </body>
 </html>

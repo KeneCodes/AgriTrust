@@ -10,14 +10,18 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/CSS/shared.css" />
+    <link rel="stylesheet" href="/CSS/auth.css" />
+
     <title>AgriTrust</title>
   </head>
   <body>
     <main class="signup-container">
       <section class="left-side">
         <!-- logo -->
-        <div class="logo">AgriTrust</div>
+        <a href="/index1.html" class="logo"
+          ><img src="" /> <span>AgriTrust</span></a
+        >
 
         <div class="content">
           <!-- heading -->
@@ -44,7 +48,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -61,7 +65,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -78,7 +82,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -95,7 +99,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -112,7 +116,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="feature-icon"
+                class="feature-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -120,7 +124,7 @@
                   d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
                 />
               </svg>
-              Dedicated Support For Individuals, Companies and Cooperatives.
+              Dedicated Support For All
             </div>
           </div>
         </div>
@@ -146,10 +150,10 @@
         <!-- for cooperate and company -->
 
         <!-- form -->
-        <form id="signup-form">
+        <form id="register-company-form" class="form">
           <div class="name-row">
             <div class="form-group">
-              <label>First Name</label>
+              <label for="first-name">First Name</label>
 
               <div class="input-box">
                 <svg
@@ -158,7 +162,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  class="input-icon icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -167,12 +171,19 @@
                   />
                 </svg>
 
-                <input type="text" placeholder="Enter your first name" />
+                <input
+                  id="first-name"
+                  name="firstName"
+                  type="text"
+                  placeholder="Enter your first name"
+                  autocomplete="given-name"
+                  required
+                />
               </div>
             </div>
 
             <div class="form-group">
-              <label>Last Name</label>
+              <label for="last-name">Last Name</label>
 
               <div class="input-box">
                 <svg
@@ -181,7 +192,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="icon"
+                  class="input-icon icon"
                 >
                   <path
                     stroke-linecap="round"
@@ -189,13 +200,20 @@
                     d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
                   />
                 </svg>
-                <input type="text" placeholder="Enter your last name" />
+                <input
+                  id="last-name"
+                  name="lastName"
+                  type="text"
+                  placeholder="Enter your last name"
+                  autocomplete="family-name"
+                  required
+                />
               </div>
             </div>
           </div>
 
           <div class="form-group">
-            <label>Business / Company Name</label>
+            <label for="business-name">Business / Company Name</label>
 
             <div class="input-box">
               <svg
@@ -204,7 +222,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -212,12 +230,18 @@
                   d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
                 />
               </svg>
-              <input type="text" placeholder="Farmer's market ltd" />
+              <input
+                id="business-name"
+                name="businessName"
+                type="text"
+                placeholder="Farmer's market ltd"
+                required
+              />
             </div>
           </div>
 
           <div class="form-group">
-            <label>Business Address</label>
+            <label for="business-address">Business Address</label>
 
             <div class="input-box">
               <svg
@@ -226,7 +250,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -239,12 +263,18 @@
                   d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
                 />
               </svg>
-              <input type="text" placeholder="Ikoyi, Lagos" />
+              <input
+                id="business-address"
+                name="businessAddress"
+                type="text"
+                placeholder="Ikoyi, Lagos"
+                required
+              />
             </div>
           </div>
 
           <div class="form-group">
-            <label>Email Address</label>
+            <label for="email">Email Address</label>
 
             <div class="input-box">
               <svg
@@ -253,7 +283,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -261,12 +291,19 @@
                   d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                 />
               </svg>
-              <input type="email" placeholder="abc@gmail.com" />
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="abc@gmail.com"
+                autocomplete="email"
+                required
+              />
             </div>
           </div>
 
           <div class="form-group">
-            <label>Phone</label>
+            <label for="tel">Phone</label>
 
             <div class="input-box">
               <svg
@@ -275,7 +312,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -283,12 +320,19 @@
                   d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                 />
               </svg>
-              <input type="tel" placeholder="+234 800 000 0000" />
+              <input
+                id="tel"
+                name="tel"
+                type="tel"
+                placeholder="+234 800 000 0000"
+                autocomplete="tel"
+                required
+              />
             </div>
           </div>
 
           <div class="form-group">
-            <label>Password</label>
+            <label for="password">Password</label>
 
             <div class="input-box">
               <svg
@@ -297,7 +341,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -305,14 +349,22 @@
                   d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
                 />
               </svg>
-              <input type="password" placeholder="Create a strong password" />
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Create a strong password"
+                autocomplete="new-password"
+                required
+                minlength="8"
+              />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="icon"
+                class="input-icon icon"
               >
                 <path
                   stroke-linecap="round"
@@ -334,14 +386,15 @@
             <a href="#"> Privacy Policy</a>
           </p>
 
-          <button class="btn btn-signup">Continue &rarr;</button>
+          <button type="submit" class="btn signup--btn">Continue &rarr;</button>
         </form>
 
         <p class="signin">
           Already have an account?
-          <a href="#">Sign in</a>
+          <a href="sign-in.html">Sign in</a>
         </p>
       </section>
     </main>
+    <script src="/JS/auth.js"></script>
   </body>
 </html>
