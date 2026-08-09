@@ -3,10 +3,1046 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AgriTrust - Buyer Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="CSS/shared.css" />
+    <link rel="stylesheet" href="CSS/dashboard.css" />
   </head>
   <body>
-    <p>Alleluia</p>
+    <!-- ++++++++++ HEADER ++++++++++++++ -->
+    <header class="agritrust-navbar">
+      <a href="/index.html" class="logo"
+        ><img src="images/logo.png" alt="AgriTrust logo" />
+        <span class="logo-text">AgriTrust</span></a
+      >
+
+      <nav class="nav-center">
+        <ul class="main-nav-list">
+          <li><a href="dashboard.html" class="main-nav-link">Home</a></li>
+          <li>
+            <a href="marketplace.html" class="main-nav-link">Marketplace</a>
+          </li>
+          <li><a href="#" class="main-nav-link">Analysis</a></li>
+          <li><a href="#" class="main-nav-link nav-cta">My Orders</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="search-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon search-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search crops, order IDs..."
+            class="search-input"
+          />
+        </div>
+        <button class="notification--btn" title="Order Notifications">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon notification-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+            />
+          </svg>
+          <span class="notification-indicator"></span>
+        </button>
+
+        <button class="cart">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon cart-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+        </button>
+
+        <div class="avatar-wrapper">
+          <span class="avatar-initials">KN</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- +++++++++++++++++ MAIN ++++++++++++++++++++ -->
+
+    <main>
+      <!-- +++++++++++++++++ SECTION 1: HERO ++++++++++++++++++++ -->
+
+      <section class="hero">
+        <div class="hero-main">
+          <div class="hero-header">
+            <div>
+              <h1 class="hero-title">
+                Hi, Green Ltd 👋
+                <span class="verified">&check; Verified Buyer</span>
+              </h1>
+              <p class="hero-subtitle">
+                Manage your agricultural purchases, track deliveries, and access
+                verified commodities from one place.
+              </p>
+            </div>
+            <div></div>
+          </div>
+
+          <div class="hero-card">
+            <div class="active-grid">
+              <div class="active-card">
+                <div class="active-title">
+                  Active Order
+                  <p>#AT-84920</p>
+                </div>
+                <div class="active-order">Yellow Maize (Grade A) · 300 MT</div>
+                <div class="active-detail">
+                  <p>Dispatched | Expected Aug 8</p>
+                  <a href="#">Track Order &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-group">
+            <a href="marketplace.html" class="btn primary--btn"
+              >Browse Marketplace &rarr;</a
+            >
+            <a href="#" class="orders--btn">View My Orders</a>
+          </div>
+
+          <div class="trust-footer">
+            🔒 <strong>Single-Source Trust:</strong> Standardized quality
+            control, direct AgriTrust fulfillment.
+          </div>
+        </div>
+
+        <!-- ++++++++++++++ RIGHT SIDE +++++++++++++++ -->
+
+        <div class="">
+          <div class="overview-card">
+            <div>
+              <div class="overview-header">
+                <span class="company-name">Green Ltd</span>
+                <span class="verified"
+                  >Active now <span class="pulse-dot"></span
+                ></span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Account Type</span
+                ><span class="data-value">Company</span>
+              </div>
+
+              <div class="data-row">
+                <span class="data-label">Verification</span
+                ><span class="data-value">Verified &check;</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Delivery Region</span
+                ><span class="data-value">Lagos Central</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">Payment Status</span
+                ><span class="data-value">Credit Account</span>
+              </div>
+              <!--  -->
+              <div class="support-card">
+                <div>
+                  <p class="support-label">Need help with your order?</p>
+                  <p class="support-detail">
+                    Our support team is always available
+                  </p>
+                </div>
+                <a href="#" class="support-link">Contact support &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ++++++++++++ SECTION 2: OVERVIEW CARDS +++++++++++++++++ -->
+
+      <section
+        class="overview-cards-section"
+        aria-label="Account Overview Metrics"
+      >
+        <div class="metrics-grid">
+          <div class="stat-card">
+            <div class="card-top">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon metrics-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              </div>
+              <span class="status-badge status-emerald"> +4 this month </span>
+            </div>
+            <div class="card-body">
+              <span class="stat-label">Completed Orders</span>
+              <div class="stat-number">42</div>
+              <span class="stat-description">100% Quality Inspected</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-top">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon metrics-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
+                  />
+                </svg>
+              </div>
+              <span class="status-badge status-amber"> 1 Due in 7 Days </span>
+            </div>
+            <div class="card-body">
+              <span class="stat-label">Outstanding Payments</span>
+              <div class="stat-number">₦4,850,000</div>
+              <span class="stat-description">Credit Available: 10.2M</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-top">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon metrics-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                  />
+                </svg>
+              </div>
+              <span class="status-badge status-emerald">
+                Verified Company
+              </span>
+            </div>
+            <div class="card-body">
+              <div class="stat-header-flex">
+                <span class="stat-label">Account Completion</span>
+                <span class="progress-percent">92%</span>
+              </div>
+              <div class="stat-number">92<span class="unit-text">%</span></div>
+
+              <div class="progress-bar-track">
+                <div class="progress-bar-fill" style="width: 92%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- +++++++++++++ SECTION 3: FEATURED PRODUCTS ++++++++++++++++++++ -->
+
+      <section class="featured-section">
+        <div class="section-header">
+          <div class="header-title-group">
+            <h2>Featured Products</h2>
+            <p>
+              Verified, high-grade agricultural produce directly supplied by
+              AgriTrust logistics.
+            </p>
+          </div>
+
+          <a href="#" class="header-link-all"> View All Commodities &rarr; </a>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-availability badge-in-stock">In Stock</span>
+
+              <img
+                src="images/yellow maize.jpg"
+                alt="Yellow Maize Grade A"
+                class="product-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Grains & Cereal</span>
+              <h3 class="product-title">Premium Yellow Maize (Grade A)</h3>
+
+              <div class="specs-container">
+                <div class="spec-item">
+                  <span class="spec-label">Available Stock</span>
+                  <span class="spec-value">1,200 MT</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Min. Order (MOQ)</span>
+                  <span class="spec-value">10 MT</span>
+                </div>
+              </div>
+
+              <div class="price-row">
+                <div class="price-group">
+                  <span class="price-currency">₦</span>
+                  <span class="price-amount">380,000</span>
+                </div>
+                <span class="price-unit">per Metric Ton</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn--quote" type="button">
+                  Request Bulk Quote
+                </button>
+                <button
+                  class="btn--cartIcon"
+                  type="button"
+                  aria-label="Add to cart"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="add-cart-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-availability badge-in-stock">In Stock</span>
+
+              <img
+                src="images/parboiled-long-grain-rice.jpg"
+                alt="Long Grain Parboiled Rice"
+                class="product-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Processed Grains</span>
+              <h3 class="product-title">Long Grain Parboiled Rice</h3>
+
+              <div class="specs-container">
+                <div class="spec-item">
+                  <span class="spec-label">Available Stock</span>
+                  <span class="spec-value">850 MT</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Min. Order (MOQ)</span>
+                  <span class="spec-value">5 MT</span>
+                </div>
+              </div>
+
+              <div class="price-row">
+                <div class="price-group">
+                  <span class="price-currency">₦</span>
+                  <span class="price-amount">620,000</span>
+                </div>
+                <span class="price-unit">per Metric Ton</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn--quote" type="button">
+                  Request Bulk Quote
+                </button>
+                <button
+                  class="btn--cartIcon"
+                  type="button"
+                  aria-label="Add to cart"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="add-cart-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-media">
+              <span class="badge-availability badge-limited-stock"
+                >Low Stock</span
+              >
+
+              <img
+                src="images/soyabeans.jpg"
+                alt="Raw Organic Soybeans"
+                class="product-image"
+              />
+            </div>
+
+            <div class="product-content">
+              <span class="product-category">Oilseeds & Legumes</span>
+              <h3 class="product-title">Raw Organic Soybeans</h3>
+
+              <div class="specs-container">
+                <div class="spec-item">
+                  <span class="spec-label">Available Stock</span>
+                  <span class="spec-value">140 MT</span>
+                </div>
+                <div class="spec-item">
+                  <span class="spec-label">Min. Order (MOQ)</span>
+                  <span class="spec-value">15 MT</span>
+                </div>
+              </div>
+
+              <div class="price-row">
+                <div class="price-group">
+                  <span class="price-currency">₦</span>
+                  <span class="price-amount">490,000</span>
+                </div>
+                <span class="price-unit">per Metric Ton</span>
+              </div>
+
+              <div class="card-actions">
+                <button class="btn--quote" type="button">
+                  Request Bulk Quote
+                </button>
+                <button
+                  class="btn--cartIcon"
+                  type="button"
+                  aria-label="Add to cart"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="add-cart-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- +++++++++++++++++ SECTION 4: CONTENT GRID ++++++++++++++++++++ -->
+
+      <section class="content-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h2>Price Trends 2026</h2>
+              <p>Wholesale price per metric ton</p>
+            </div>
+            <div class="commodity-pills">
+              <span class="pill pill-maize">maize</span>
+              <span class="pill pill-rice">rice</span>
+              <span class="pill pill-soy">soy</span>
+              <span class="pill pill-cassava">cassava</span>
+            </div>
+          </div>
+
+          <div class="chart-canvas">
+            <div class="chart-row">
+              <span class="y-label">400</span>
+              <div class="chart-line"></div>
+            </div>
+            <div class="chart-row">
+              <span class="y-label">300</span>
+              <div class="chart-line"></div>
+            </div>
+            <div class="chart-row">
+              <span class="y-label">200</span>
+              <div class="chart-line"></div>
+            </div>
+            <div class="chart-row">
+              <span class="y-label">100</span>
+              <div class="chart-line"></div>
+            </div>
+            <div class="chart-row">
+              <span class="y-label">0</span>
+              <div class="chart-line"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-header">
+            <h2>Market Insight</h2>
+            <a href="#" class="link-view-all">View all</a>
+          </div>
+
+          <div class="activity-list">
+            <div class="activity-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon info-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+
+              <div class="item-content">
+                <span class="item-title">Cassava</span>
+                <p class="item-desc">
+                  Demand surge in Lagos — prices up 24% in 2 weeks
+                </p>
+                <span class="item-time">2h ago</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon info-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+
+              <div class="item-content">
+                <span class="item-title">Maize</span>
+                <p class="item-desc">
+                  Strong market activity — Grade A supply attracting bulk buyers
+                </p>
+                <span class="item-time">5h ago</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon info-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+
+              <div class="item-content">
+                <span class="item-title">Yam </span>
+                <p class="item-desc">
+                  Seasonal demand rising — buyers increasing orders ahead of
+                  peak consumption
+                </p>
+                <span class="item-time">12h ago</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon info-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+
+              <div class="item-content">
+                <span class="item-title">Sorghum</span>
+                <p class="item-desc">
+                  Steady buyer demand — activity remains strong among food
+                  processors
+                </p>
+                <span class="item-time">Yesterday</span>
+              </div>
+            </div>
+
+            <div class="activity-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon info-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+
+              <div class="item-content">
+                <span class="item-title">Millet</span>
+                <p class="item-desc">
+                  Premium demand — prices remain competitive across northern
+                  markets
+                </p>
+                <span class="item-time">2 days ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- +++++++++++++ SECTION 5: RECENT ORDERS ++++++++++++++++++ -->
+
+      <section class="orders-section" aria-label="Recent Commodity Orders">
+        <div class="orders-header-card">
+          <div class="orders-title-group">
+            <h2 class="orders-title">Recent Orders</h2>
+            <span class="orders-count-badge">5 Orders</span>
+          </div>
+
+          <div class="orders-toolbar">
+            <div class="table-search-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon search-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search order ID, commodity..."
+                class="table-search-input"
+              />
+            </div>
+
+            <button class="btn--filter" title="Filter Orders">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon filter-icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+                />
+              </svg>
+
+              <span>Filter</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="agritrust-table">
+            <thead>
+              <tr>
+                <th scope="col">Order Number</th>
+                <th scope="col">Products</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Order Status</th>
+                <th scope="col">Expected Delivery</th>
+                <th scope="col">Total Cost</th>
+                <th scope="col" class="text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-row">
+                <td class="cell-order-id">
+                  <span class="order-id">#AT-84920</span>
+                  <span class="order-date">Aug 06, 2026</span>
+                </td>
+                <td class="cell-products">
+                  <div class="product-item">
+                    <span class="product-name">Yellow Maize (Grade A)</span>
+                    <span class="product-sub"
+                      >Sourced directly by AgriTrust</span
+                    >
+                  </div>
+                </td>
+                <td class="cell-qty">300 Metric Tons</td>
+                <td>
+                  <span class="badge-status badge-dispatched">
+                    <span class="badge-dot"></span> Dispatched
+                  </span>
+                </td>
+                <td class="cell-date">Aug 08, 2026</td>
+                <td class="cell-amount">₦14,200,000</td>
+                <td class="cell-actions text-right">
+                  <button class="btn-action-icon" title="Download Invoice">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon download-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn-table-primary">View Details</button>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="cell-order-id">
+                  <span class="order-id">#AT-84881</span>
+                  <span class="order-date">Aug 05, 2026</span>
+                </td>
+                <td class="cell-products">
+                  <div class="product-item">
+                    <span class="product-name"
+                      >Soya Beans &amp; Black-Eye Beans</span
+                    >
+                    <span class="product-sub">2 Items Bundle</span>
+                  </div>
+                </td>
+                <td class="cell-qty">200 Metric Tons</td>
+                <td>
+                  <span class="badge-status badge-processing">
+                    <span class="badge-dot"></span> Processing
+                  </span>
+                </td>
+                <td class="cell-date">Aug 10, 2026</td>
+                <td class="cell-amount">₦28,500,000</td>
+                <td class="cell-actions text-right">
+                  <button class="btn-action-icon" title="Download Invoice">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon download-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn-table-primary">View Details</button>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="cell-order-id">
+                  <span class="order-id">#AT-84732</span>
+                  <span class="order-date">Aug 04, 2026</span>
+                </td>
+                <td class="cell-products">
+                  <div class="product-item">
+                    <span class="product-name">Parboiled Long Grain Rice </span>
+                    <span class="product-sub"
+                      >Sourced directly by AgriTrust</span
+                    >
+                  </div>
+                </td>
+                <td class="cell-qty">150 Metric Tons</td>
+                <td>
+                  <span class="badge-status badge-pending">
+                    <span class="badge-dot"></span> Pending
+                  </span>
+                </td>
+                <td class="cell-date">Aug 21, 2026</td>
+                <td class="cell-amount">₦9,800,000</td>
+                <td class="cell-actions text-right">
+                  <button class="btn-action-icon" title="Download Invoice">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon download-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn-table-primary">View Details</button>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="cell-order-id">
+                  <span class="order-id">#AT-84109</span>
+                  <span class="order-date">Jul 28, 2026</span>
+                </td>
+                <td class="cell-products">
+                  <div class="product-item">
+                    <span class="product-name">Wheat</span>
+                    <span class="product-sub"
+                      >Sourced directly by AgriTrust</span
+                    >
+                  </div>
+                </td>
+                <td class="cell-qty">80 Metric Tons</td>
+                <td>
+                  <span class="badge-status badge-delivered">
+                    <span class="badge-dot"></span> Delivered
+                  </span>
+                </td>
+                <td class="cell-date">Jul 31, 2026</td>
+                <td class="cell-amount">₦6,400,000</td>
+                <td class="cell-actions text-right">
+                  <button class="btn-action-icon" title="Download Invoice">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon download-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn-table-primary">View Details</button>
+                </td>
+              </tr>
+
+              <tr class="table-row">
+                <td class="cell-order-id">
+                  <span class="order-id">#AT-83990</span>
+                  <span class="order-date">Jul 20, 2026</span>
+                </td>
+                <td class="cell-products">
+                  <div class="product-item">
+                    <span class="product-name">Sorghum </span>
+                    <span class="product-sub">Order Voided</span>
+                  </div>
+                </td>
+                <td class="cell-qty">50 Metric Tons</td>
+                <td>
+                  <span class="badge-status badge-cancelled">
+                    <span class="badge-dot"></span> Cancelled
+                  </span>
+                </td>
+                <td class="cell-date">&mdash;</td>
+                <td class="cell-amount">₦3,200,000</td>
+                <td class="cell-actions text-right">
+                  <button class="btn-action-icon" title="Download Invoice">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="icon download-icon"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                      />
+                    </svg>
+                  </button>
+                  <button class="btn-table-primary">View Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="pagination-footer">
+            <span class="pagination-info"
+              >Showing <strong>1–5</strong> of <strong>42</strong> total
+              orders</span
+            >
+            <div class="pagination-controls">
+              <button class="btn-page" disabled>&larr; Previous</button>
+              <button class="btn-page page-number active">1</button>
+              <button class="btn-page page-number">2</button>
+              <button class="btn-page page-number">3</button>
+              <span class="page-ellipsis">&hellip;</span>
+              <button class="btn-page page-number">9</button>
+              <button class="btn-page">Next &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- +++++++++++++ SECTION 6: SUPPORT SECTION ++++++++++++++++++ -->
+
+      <section class="support-section">
+        <div class="support-content">
+          <div class="support-text">
+            <span class="support-header">NEED HELP?</span>
+            <h2>We're here to help.</h2>
+            <p>
+              Get help with orders, payments, deliveries, or your AgriTrust
+              account.
+            </p>
+          </div>
+
+          <div class="support-actions">
+            <a href="support.html" class="support-btn"> Contact Support </a>
+
+            <a href="help.html" class="support-link"> Help Center → </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ++++++++++++++++++ FOOTER +++++++++++++++++++++ -->
+
+    <!-- +++++++++++++++ FOOTER +++++++++++++++ -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo logo">
+              <img src="images/logo.png" alt="AgriTrust logo" />
+              <span class="logo-text">AgriTrust</span>
+            </a>
+
+            <p>Trusted agricultural commerce, simplified.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Marketplace</h3>
+
+              <a href="marketplace.html">Browse Products</a>
+              <a href="orders.html">My Orders</a>
+              <a href="payments.html">Payments</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Support</h3>
+
+              <a href="support.html">Contact Support</a>
+              <a href="help.html">Help Center</a>
+              <a href="faq.html">FAQs</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Company</h3>
+
+              <a href="about.html">About AgriTrust</a>
+              <a href="privacy.html">Privacy</a>
+              <a href="terms.html">Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 AgriTrust. All rights reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="/JS/auth.js"></script>
   </body>
 </html>

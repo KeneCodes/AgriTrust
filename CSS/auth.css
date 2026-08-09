@@ -1,39 +1,43 @@
 .signup-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* LEFT PANEL */
+/* ++++++++++++++++++++++ LEFT PANEL ++++++++++++++++++++++++ */
 
 .left-side {
   flex: 1;
-  gap: 4rem;
-  background-color: #16a34a;
-  color: #fff;
+  /* gap: 2rem; */
+  background-color: var(--green);
+  color: var(--surface-white);
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 6rem;
+  justify-content: space-around;
+  padding: 3rem;
+  height: 100%;
 }
 
 .content h1 {
-  font-size: clamp(3.2rem, 5vw, 4.8rem);
-  line-height: 1.2;
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 2rem;
 }
 
 .content p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.6;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 
 .features {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .feature {
@@ -42,22 +46,56 @@
   align-items: center;
 }
 
-/* RIGHT PANEL */
+/* +++++++++++++ RIGHT PANEL ++++++++++++++++++++++ */
 
 .right-side {
-  background-color: #f6f9f2;
+  background-color: var(--surface-bg);
   flex: 1;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  padding: 3.5rem 5rem;
+  height: 100%;
+  overflow: scroll;
 }
 
 .error-message {
-  color: #dc2626;
+  color: var(--error-commodity-cassava);
   font-size: 1.6rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  min-height: 2rem;
+  min-height: 1.6rem;
+}
+
+.right-side h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.right-side h1,
+.subtitle {
+  align-self: center;
+}
+
+/* ++++++++++++++ INDIVIDUAL AND COMPANY FORMS +++++++++++++++++*/
+
+.register-company-page,
+.register-individual-page {
+  align-items: center;
+  padding: 8rem;
+}
+
+.signin {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 1.8rem;
 }
 
 /* ++++++++++++++ INDIVIDUAL AND COMPANY FORMS +++++++++++++++++*/
@@ -66,24 +104,6 @@
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
-}
-
-.right-side h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #1e293b;
-}
-
-.subtitle {
-  margin-bottom: 4rem;
-  color: #64748b;
-  font-size: 1.4rem;
-  line-height: 1.5;
-}
-
-.right-side h1,
-.subtitle {
-  align-self: center;
 }
 
 .name-row {
@@ -103,7 +123,7 @@
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #334155;
+  color: var(--text-label);
 }
 
 .input-box {
@@ -114,19 +134,14 @@
   width: 100%;
   height: 5rem;
   padding: 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-subtle);
   border-radius: 0.8rem;
-  background-color: #fff;
-}
-
-.input-box i {
-  color: #7f7f7f;
-  font-size: 2rem;
+  background-color: var(--surface-white);
 }
 
 .input-box:focus-within {
-  border-color: #149343;
-  box-shadow: 0 8px 20px rgba(20, 147, 67, 0.15);
+  border-color: var(--green);
+  box-shadow: 0 8px 20px var(--border-subtle);
 }
 
 .input-box input {
@@ -144,6 +159,13 @@
   margin-top: 1.8rem;
 }
 
+/* +++++++++++++ SIGN IN PAGE ++++++++++++++*/
+.signin-page {
+  align-items: center;
+  justify-content: center;
+  padding: 8rem;
+}
+
 .forget-password {
   width: 100%;
   max-width: 60rem;
@@ -155,63 +177,54 @@
   padding: 0.6rem 0;
 }
 
-.signin {
-  font-size: 1.4rem;
-  text-align: center;
-  margin-top: 1.8rem;
-}
-
-.back-signin {
-  align-self: center;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
 /* +++++++++++++ ACCOUNT TYPE SELECTION PAGE ++++++++++++++*/
 
 .account-type-page {
   padding: 8rem;
-  color: #1e293b;
+  color: var(--text-primary);
 }
 
 .account-type-page h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4vw, 3.5rem);
   margin-bottom: 1rem;
   color: #1e293b;
 }
 
 .account-type-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   padding: 2rem;
   margin-bottom: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-subtle);
   border-radius: 1.2rem;
   cursor: pointer;
-  overflow: hidden;
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
 .account-type-card:hover {
-  border-color: #16a34a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--green);
+  box-shadow: 0 8px 20px var(--border-subtle);
   transform: translateY(-3px);
 }
 
 .account-type-card.selected {
-  border: 1px solid #16a34a;
-  background-color: #f0fdf4;
+  border: 2px solid var(--green);
+  background-color: var(--green-light);
 }
 
 .account {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.account > div {
+  flex: 1;
+}
+
+.account input[type="radio"] {
+  margin-left: auto;
 }
 
 .account h3 {
@@ -220,16 +233,14 @@
 }
 
 .account p {
-  color: #777;
+  color: var(--text-secondary);
   font-size: 1.4rem;
   line-height: 1.5;
-  /* max-width: 33rem; */
 }
 
 /* ++++++++++++++++ VERIFICATION OTP PAGE +++++++++++++++++*/
 
 .verification-page {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 8rem;
@@ -263,7 +274,7 @@
 .otp-container input {
   width: 5rem;
   height: 6rem;
-  border: 1px solid #777;
+  border: 1px solid var(--border-less-subtle);
   border-radius: 1rem;
   text-align: center;
   background: transparent;
@@ -275,8 +286,8 @@
 }
 
 .otp-container input:focus {
-  border-color: #149343;
-  box-shadow: 0 8px 20px rgba(20, 147, 67, 0.15);
+  border-color: var(--green-hover);
+  box-shadow: 0 8px 20px var(--box-shadow-auth);
 }
 
 .resend {
@@ -287,14 +298,26 @@
 
 /* +++++++++++++++FORGOT PASSWORD PAGE ++++++++++++++++++++++++ */
 
+.forgot-password-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+}
+
+.back-signin {
+  align-self: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
 .success-message {
-  color: #16a34a;
+  color: var(--green);
   font-size: 1.6rem;
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   min-height: 2rem;
-  /* background-color: #dc2626; */
 }
 
 /* +++++++++++++++ TABLET (768px and below) +++++++++++++++++ */
@@ -304,9 +327,13 @@
     grid-template-columns: 1fr;
   }
 
-  .left-side,
+  .left-side {
+    display: none;
+  }
+
   .right-side {
-    padding: 4rem;
+    padding: 4rem 2.5rem;
+    width: 100%;
   }
 
   .name-row {
@@ -318,22 +345,24 @@
     max-width: 100%;
   }
 
-  .account-type-page {
-    padding: 4rem;
-  }
-
-  .verification-page {
+  .account-type-page,
+  .verification-page,
+  .forgot-password-page,
+  .signin-page {
     padding: 4rem;
   }
 }
-
 /* ++++++++++++++++ MOBILE (480px and below) +++++++++++++++++ */
 
 @media (max-width: 480px) {
   .left-side,
   .right-side,
   .account-type-page,
-  .verification-page {
+  .verification-page,
+  .forgot-password-page,
+  .signin-page,
+  .register-company-page,
+  .register-individual-page {
     padding: 2.5rem;
   }
 
@@ -342,7 +371,7 @@
   }
 
   .content p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
   }
 
@@ -351,7 +380,7 @@
   }
 
   .right-side h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 
   .subtitle {
