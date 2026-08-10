@@ -1979,7 +1979,7 @@ section:last-child {
 
 /* ++++++++++JavaScript ++++++++++ */
 
-/* ---------- FILTER MENU ---------- */
+/* +++++++++++++ FILTER MENU ---------- */
 
 .orders-toolbar {
   position: relative;
@@ -2035,7 +2035,7 @@ section:last-child {
   outline-offset: 2px;
 }
 
-/* ---------- NOTIFICATION PANEL ---------- */
+/* +++++++++++++ NOTIFICATION PANEL ++++++++++++ */
 
 .notification-panel {
   position: fixed;
@@ -2066,8 +2066,8 @@ section:last-child {
 }
 
 .notification-panel-header strong {
-  color: var(--text-primary);
-  font-size: 1rem;
+  color: var(--green-dark);
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -2082,9 +2082,9 @@ section:last-child {
   border-radius: 0.5rem;
 
   background: transparent;
-  color: var(--text-secondary);
-
-  font-size: 1.3rem;
+  color: var(--surface-white);
+  background-color: var(--notification-cancelled-text);
+  font-size: 1.8rem;
   cursor: pointer;
 
   transition:
@@ -2093,8 +2093,8 @@ section:last-child {
 }
 
 .notification-close:hover {
-  background-color: var(--green-light);
-  color: var(--green-dark);
+  background-color: var(--surface-white);
+  color: var(--notification-cancelled-text);
 }
 
 .notification-item {
@@ -2130,7 +2130,7 @@ section:last-child {
   font-size: 1rem;
 }
 
-/* ---------- ACCOUNT MENU ---------- */
+/* +++++++++++++ ACCOUNT MENU ++++++++++++ */
 
 .account-menu {
   position: absolute;
@@ -2191,7 +2191,7 @@ section:last-child {
   color: var(--green-dark);
 }
 
-/* ---------- TOAST ---------- */
+/* +++++++++++++ TOAST ++++++++++++ */
 
 .dashboard-toast {
   position: fixed;
@@ -2225,7 +2225,7 @@ section:last-child {
   transform: translateY(0);
 }
 
-/* ---------- MOBILE ---------- */
+/* +++++++++++++ MOBILE ++++++++++++ */
 
 @media (max-width: 600px) {
   .filter-menu {

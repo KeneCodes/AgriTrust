@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgriTrust - Market Place</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="CSS/shared.css" />
+    <link rel="stylesheet" href="CSS/market.css" />
+  </head>
+  <body>
+    <!-- +++++++++++++++++++++ HEADER +++++++++++++++++++++ -->
+    <header class="agritrust-navbar">
+      <a href="/index.html" class="logo"
+        ><img src="images/logo.png" alt="AgriTrust logo" />
+        <span class="logo-text">AgriTrust</span></a
+      >
+
+      <nav class="nav-center">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">Marketplace</a></li>
+          <li><a href="#" class="main-nav-link">Analysis</a></li>
+          <li><a href="#" class="main-nav-link">Messages</a></li>
+          <li><a href="#" class="main-nav-link nav-cta">Payments</a></li>
+          <li><a href="#" class="main-nav-link nav-cta">My Order</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="search-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon search-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search crops, commodities, order IDs, invoices..."
+            class="search-input"
+          />
+        </div>
+        <button class="notification--btn" title="Order Notifications">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon notification-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+            />
+          </svg>
+          <span class="notification-indicator"></span>
+        </button>
+
+        <div class="cart">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon cart-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+        </div>
+
+        <div class="avatar-wrapper">
+          <span class="avatar-initials">KN</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="marketplace-section">
+        <div class="marketplace-header">
+          <h1 class="marketplace-title">Marketplace</h1>
+          <p class="marketplace-subtitle">
+            Browse verified agricultural products from your no. 1 trusted
+            supplier in Nigeria.
+          </p>
+        </div>
+
+        <div class="marketplace-layout">
+          <aside class="filter-sidebar">
+            <div class="filter-group">
+              <div class="filter-label">Category</div>
+              <ul class="category-list">
+                <li class="category-item active">All</li>
+                <li class="category-item">Grains</li>
+                <li class="category-item">Legumes</li>
+                <li class="category-item">Cash Crops</li>
+                <li class="category-item">Tubers</li>
+              </ul>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-label">Region</div>
+              <select class="filter-select">
+                <option>All Regions</option>
+                <option>North Central</option>
+                <option>North East</option>
+                <option>North West</option>
+                <option>South East</option>
+                <option>South South</option>
+                <option>South West</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <div class="filter-label">Price Range (₦/KG)</div>
+              <div class="price-range-inputs">
+                <div class="price-field">
+                  <span>From</span>
+                  <input type="text" class="filter-input" value="0" />
+                </div>
+                <div class="price-field">
+                  <span>To</span>
+                  <input type="text" class="filter-input" value="1500" />
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- +++++++++++++++ PRODUCTS GRID & PRODUCT CARDS ++++++++++++++++++ -->
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Legumes</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/honey beans.jpeg"
+                  alt="Honey Beans"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Honey Beans</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★ <span class="rating-score">4.2</span>
+                  </div>
+                  <span class="quality-badge">96% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/white maize2.jpg"
+                  alt="White Maize on cob"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">White Maize With Cob</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.6</span>
+                  </div>
+                  <span class="quality-badge">92% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Tubers</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/cassava.jpeg"
+                  alt="cassava"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Cassava</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.7</span>
+                  </div>
+                  <span class="quality-badge">99% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5000 Tubers</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/parboiled-short-grain-rice.jpg"
+                  alt="Parboiled Short Grain Rice"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Parboiled Short Grain Rice</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">95% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/millet.jpg"
+                  alt="Millet"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Millet</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.9</span>
+                  </div>
+                  <span class="quality-badge">99% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/yellow maize.jpg"
+                  alt="Yellow Maize on cob"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Yellow Maize</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">98% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Legumes</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/black-eyed-beans.webp"
+                  alt="Black-Eyed Beans"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Black-Eye Beans</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">99% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Tubers</span>
+                <span class="badge-verified">Verified</span>
+                <img src="images/yam.jpeg" alt="Yam" class="product-image" />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Yam</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.5</span>
+                  </div>
+                  <span class="quality-badge">90% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>500 Tubers</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Legumes</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/soyabeans.jpg"
+                  alt="Soybeans"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Soybeans</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Unprocessed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">95% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/parboiled-long-grain-rice.jpg"
+                  alt="Long Grain Rice"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Parboiled Long Grain Rice</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.9</span>
+                  </div>
+                  <span class="quality-badge">99% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/sorghum-seeds.jpg"
+                  alt="Sorghum"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Sorghum</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.9</span>
+                  </div>
+                  <span class="quality-badge">97% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/maize-white-corn-seeds.jpg"
+                  alt="White Maize Seed"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">White Maize Seeds</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.7</span>
+                  </div>
+                  <span class="quality-badge">93% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img src="images/wheat.jpg" alt="Wheat" class="product-image" />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Wheat</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.7</span>
+                  </div>
+                  <span class="quality-badge">98% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Legumes</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/groundnut1.jpeg"
+                  alt="Groundnut"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Groundnut</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">95% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-media">
+                <span class="badge-category">Grains</span>
+                <span class="badge-verified">Verified</span>
+                <img
+                  src="images/yellow-maize-seed.jpeg"
+                  alt="Yellow Maize Seed"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-header-row">
+                  <h2 class="product-title">Yellow Maize Seed</h2>
+                  <span class="product-price">250/kg</span>
+                </div>
+                <p class="product-state">Processed</p>
+
+                <div class="product-rating-row">
+                  <div class="rating-stars">
+                    ★★★★★ <span class="rating-score">4.8</span>
+                  </div>
+                  <span class="quality-badge">95% Excellent</span>
+                </div>
+
+                <div class="product-specs-row">
+                  <span>Available: <strong>50 MT</strong></span>
+                  <span>Min: <strong>5 MT</strong></span>
+                </div>
+
+                <button class="btn-details">Details</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="pagination-market">
+          <div class="pagination-controls">
+            <button class="btn-page" disabled>&larr; Previous</button>
+            <button class="btn-page page-number active">1</button>
+            <button class="btn-page page-number">2</button>
+            <button class="btn-page page-number">3</button>
+            <span class="page-ellipsis">&hellip;</span>
+            <button class="btn-page page-number">9</button>
+            <button class="btn-page">Next &rarr;</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- +++++++++++++++ FOOTER +++++++++++++++ -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo logo">
+              <img src="images/logo.png" alt="AgriTrust logo" />
+              <span class="logo-text">AgriTrust</span>
+            </a>
+
+            <p>Trusted agricultural commerce, simplified.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Marketplace</h3>
+
+              <a href="marketplace.html">Browse Products</a>
+              <a href="orders.html">My Orders</a>
+              <a href="payments.html">Payments</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Support</h3>
+
+              <a href="support.html">Contact Support</a>
+              <a href="help.html">Help Center</a>
+              <a href="faq.html">FAQs</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Company</h3>
+
+              <a href="about.html">About AgriTrust</a>
+              <a href="privacy.html">Privacy</a>
+              <a href="terms.html">Terms</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 AgriTrust. All rights reserved.</p>
+
+          <div class="footer-bottom-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -35,6 +35,7 @@
   --status-delivered-dot: #10b981;
   --status-cancelled-bg: #fee2e2;
   --status-cancelled-text: #991b1b;
+  --notification-cancelled-text: #da2929ce;
   --status-cancelled-dot: var(--error-commodity-cassava);
 
   /* neutral */
