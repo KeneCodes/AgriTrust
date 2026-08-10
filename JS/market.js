@@ -792,30 +792,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ==========================================================
-     OPTIONAL REGION DATA
-     
-     If you later add:
-
-     data-region="North West"
-
-     to a product card, the region filter works
-     automatically.
-     ========================================================== */
-
-  /*
-    Example:
-
-    <article
-      class="product-card"
-      data-region="North West"
-    >
-  */
-
-  /* ==========================================================
-     INITIALIZE
-     ========================================================== */
-
   updateCartCount();
 
   renderProducts();
