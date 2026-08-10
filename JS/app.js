@@ -43,7 +43,7 @@ const crops = [
     rating: 4.8,
     reviews: 142,
     badge: "Hot",
-    img: "images/white_maize.jpg",
+    img: "images/white maize2.jpg",
   },
   {
     name: "Soybeans",
@@ -52,7 +52,7 @@ const crops = [
     rating: 4.9,
     reviews: 98,
     badge: "New",
-    img: "images/soybeans.jpg",
+    img: "images/soyabeans.jpg",
   },
   {
     name: "Brown Beans",
@@ -61,7 +61,7 @@ const crops = [
     rating: 4.7,
     reviews: 76,
     badge: "Popular",
-    img: "images/brown_beans.jpg",
+    img: "images/honey beans.jpeg",
   },
   {
     name: "Local Rice",
@@ -70,7 +70,7 @@ const crops = [
     rating: 4.6,
     reviews: 210,
     badge: "Hot",
-    img: "images/rice_grains.jpg",
+    img: "images/parboiled-short-grain-rice.jpg",
   },
   {
     name: "Yellow Maize",
@@ -79,7 +79,7 @@ const crops = [
     rating: 4.5,
     reviews: 88,
     badge: "Available",
-    img: "images/hero_grains.jpg",
+    img: "images/yellow-maize-seed.jpeg",
   },
 ];
 
