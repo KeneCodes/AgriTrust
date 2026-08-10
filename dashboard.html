@@ -29,8 +29,10 @@
           <li>
             <a href="marketplace.html" class="main-nav-link">Marketplace</a>
           </li>
-          <li><a href="#" class="main-nav-link">Analysis</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">My Orders</a></li>
+          <li><a href="analysis.html" class="main-nav-link">Analysis</a></li>
+          <li>
+            <a href="orders.html" class="main-nav-link nav-cta">My Orders</a>
+          </li>
         </ul>
       </nav>
 
@@ -52,11 +54,17 @@
           </svg>
           <input
             type="text"
+            id="dashboard-search"
             placeholder="Search crops, order IDs..."
             class="search-input"
           />
         </div>
-        <button class="notification--btn" title="Order Notifications">
+        <button
+          class="notification--btn"
+          id="notification-btn"
+          type="button"
+          aria-label="Notifications"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -74,7 +82,12 @@
           <span class="notification-indicator"></span>
         </button>
 
-        <button class="cart">
+        <button
+          class="cart"
+          id="cart-btn"
+          type="button"
+          aria-label="Shopping cart"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -89,11 +102,17 @@
               d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
             />
           </svg>
+          <span id="cart-count">0</span>
         </button>
 
-        <div class="avatar-wrapper">
-          <span class="avatar-initials">KN</span>
-        </div>
+        <button
+          class="avatar-wrapper"
+          id="account-btn"
+          type="button"
+          aria-label="Open account menu"
+        >
+          KN
+        </button>
       </div>
     </header>
 
@@ -128,7 +147,7 @@
                 <div class="active-order">Yellow Maize (Grade A) · 300 MT</div>
                 <div class="active-detail">
                   <p>Dispatched | Expected Aug 8</p>
-                  <a href="#">Track Order &rarr;</a>
+                  <a href="orders.html">Track Order &rarr;</a>
                 </div>
               </div>
             </div>
@@ -138,7 +157,7 @@
             <a href="marketplace.html" class="btn primary--btn"
               >Browse Marketplace &rarr;</a
             >
-            <a href="#" class="orders--btn">View My Orders</a>
+            <a href="orders.html" class="orders--btn">View My Orders</a>
           </div>
 
           <div class="trust-footer">
@@ -183,7 +202,9 @@
                     Our support team is always available
                   </p>
                 </div>
-                <a href="#" class="support-link">Contact support &rarr;</a>
+                <a href="support.html" class="support-link"
+                  >Contact support &rarr;</a
+                >
               </div>
             </div>
           </div>
@@ -300,11 +321,13 @@
             </p>
           </div>
 
-          <a href="#" class="header-link-all"> View All Commodities &rarr; </a>
+          <a href="marketplace.html" class="header-link-all">
+            View All Commodities &rarr;
+          </a>
         </div>
 
         <div class="products-grid">
-          <article class="product-card">
+          <article class="product-card" data-product="maize">
             <div class="product-media">
               <span class="badge-availability badge-in-stock">In Stock</span>
 
@@ -339,11 +362,12 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn--quote" type="button">
+                <button class="btn--quote" type="button" data-action="quote">
                   Request Bulk Quote
                 </button>
                 <button
                   class="btn--cartIcon"
+                  data-action="add-to-cart"
                   type="button"
                   aria-label="Add to cart"
                 >
@@ -366,7 +390,7 @@
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-product="rice">
             <div class="product-media">
               <span class="badge-availability badge-in-stock">In Stock</span>
 
@@ -401,11 +425,12 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn--quote" type="button">
+                <button class="btn--quote" type="button" data-action="quote">
                   Request Bulk Quote
                 </button>
                 <button
                   class="btn--cartIcon"
+                  data-action="add-to-cart"
                   type="button"
                   aria-label="Add to cart"
                 >
@@ -428,7 +453,7 @@
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" data-product="soybean">
             <div class="product-media">
               <span class="badge-availability badge-limited-stock"
                 >Low Stock</span
@@ -465,12 +490,13 @@
               </div>
 
               <div class="card-actions">
-                <button class="btn--quote" type="button">
+                <button class="btn--quote" type="button" data-action="quote">
                   Request Bulk Quote
                 </button>
                 <button
                   class="btn--cartIcon"
                   type="button"
+                  data-action="add-to-cart"
                   aria-label="Add to cart"
                 >
                   <svg
@@ -538,7 +564,7 @@
         <div class="activity-card">
           <div class="activity-header">
             <h2>Market Insight</h2>
-            <a href="#" class="link-view-all">View all</a>
+            <a href="analysis.html" class="link-view-all">View all</a>
           </div>
 
           <div class="activity-list">
@@ -702,27 +728,35 @@
                 type="text"
                 placeholder="Search order ID, commodity..."
                 class="table-search-input"
+                id="order-search"
               />
             </div>
 
-            <button class="btn--filter" title="Filter Orders">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon filter-icon"
+            <div class="filter-wrapper">
+              <button
+                class="btn--filter"
+                title="Filter Orders"
+                id="order-filter-btn"
+                type="button"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
-                />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon filter-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+                  />
+                </svg>
 
-              <span>Filter</span>
-            </button>
+                <span>Filter</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -740,7 +774,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="table-row">
+              <tr class="table-row" data-order-id="AGR-1024">
                 <td class="cell-order-id">
                   <span class="order-id">#AT-84920</span>
                   <span class="order-date">Aug 06, 2026</span>
@@ -762,7 +796,13 @@
                 <td class="cell-date">Aug 08, 2026</td>
                 <td class="cell-amount">₦14,200,000</td>
                 <td class="cell-actions text-right">
-                  <button class="btn-action-icon" title="Download Invoice">
+                  <button
+                    class="btn-action-icon"
+                    title="Download Invoice"
+                    type="button"
+                    data-action="download-invoice"
+                    aria-label="Download invoice"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -778,11 +818,18 @@
                       />
                     </svg>
                   </button>
-                  <button class="btn-table-primary">View Details</button>
+                  <button
+                    class="btn-table-primary"
+                    type="button"
+                    data-action="view-order"
+                    aria-label="View order details"
+                  >
+                    View Details
+                  </button>
                 </td>
               </tr>
 
-              <tr class="table-row">
+              <tr class="table-row" data-order-id="AGR-1025">
                 <td class="cell-order-id">
                   <span class="order-id">#AT-84881</span>
                   <span class="order-date">Aug 05, 2026</span>
@@ -804,7 +851,13 @@
                 <td class="cell-date">Aug 10, 2026</td>
                 <td class="cell-amount">₦28,500,000</td>
                 <td class="cell-actions text-right">
-                  <button class="btn-action-icon" title="Download Invoice">
+                  <button
+                    class="btn-action-icon"
+                    title="Download Invoice"
+                    type="button"
+                    data-action="download-invoice"
+                    aria-label="Download invoice"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -820,11 +873,18 @@
                       />
                     </svg>
                   </button>
-                  <button class="btn-table-primary">View Details</button>
+                  <button
+                    class="btn-table-primary"
+                    type="button"
+                    data-action="view-order"
+                    aria-label="View order details"
+                  >
+                    View Details
+                  </button>
                 </td>
               </tr>
 
-              <tr class="table-row">
+              <tr class="table-row" data-order-id="AGR-1026">
                 <td class="cell-order-id">
                   <span class="order-id">#AT-84732</span>
                   <span class="order-date">Aug 04, 2026</span>
@@ -846,7 +906,13 @@
                 <td class="cell-date">Aug 21, 2026</td>
                 <td class="cell-amount">₦9,800,000</td>
                 <td class="cell-actions text-right">
-                  <button class="btn-action-icon" title="Download Invoice">
+                  <button
+                    class="btn-action-icon"
+                    title="Download Invoice"
+                    type="button"
+                    data-action="download-invoice"
+                    aria-label="Download invoice"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -862,11 +928,18 @@
                       />
                     </svg>
                   </button>
-                  <button class="btn-table-primary">View Details</button>
+                  <button
+                    class="btn-table-primary"
+                    type="button"
+                    data-action="view-order"
+                    aria-label="View order details"
+                  >
+                    View Details
+                  </button>
                 </td>
               </tr>
 
-              <tr class="table-row">
+              <tr class="table-row" data-order-id="AGR-1027">
                 <td class="cell-order-id">
                   <span class="order-id">#AT-84109</span>
                   <span class="order-date">Jul 28, 2026</span>
@@ -888,7 +961,13 @@
                 <td class="cell-date">Jul 31, 2026</td>
                 <td class="cell-amount">₦6,400,000</td>
                 <td class="cell-actions text-right">
-                  <button class="btn-action-icon" title="Download Invoice">
+                  <button
+                    class="btn-action-icon"
+                    title="Download Invoice"
+                    type="button"
+                    data-action="download-invoice"
+                    aria-label="Download invoice"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -904,11 +983,18 @@
                       />
                     </svg>
                   </button>
-                  <button class="btn-table-primary">View Details</button>
+                  <button
+                    class="btn-table-primary"
+                    type="button"
+                    data-action="view-order"
+                    aria-label="View order details"
+                  >
+                    View Details
+                  </button>
                 </td>
               </tr>
 
-              <tr class="table-row">
+              <tr class="table-row" data-order-id="AGR-1028">
                 <td class="cell-order-id">
                   <span class="order-id">#AT-83990</span>
                   <span class="order-date">Jul 20, 2026</span>
@@ -928,7 +1014,13 @@
                 <td class="cell-date">&mdash;</td>
                 <td class="cell-amount">₦3,200,000</td>
                 <td class="cell-actions text-right">
-                  <button class="btn-action-icon" title="Download Invoice">
+                  <button
+                    class="btn-action-icon"
+                    title="Download Invoice"
+                    type="button"
+                    data-action="download-invoice"
+                    aria-label="Download invoice"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -944,7 +1036,14 @@
                       />
                     </svg>
                   </button>
-                  <button class="btn-table-primary">View Details</button>
+                  <button
+                    class="btn-table-primary"
+                    type="button"
+                    data-action="view-order"
+                    aria-label="View order details"
+                  >
+                    View Details
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -984,7 +1083,9 @@
           <div class="support-actions">
             <a href="support.html" class="support-btn"> Contact Support </a>
 
-            <a href="help.html" class="support-link"> Help Center → </a>
+            <a href="mailto:support@agritrust.com" class="support-link">
+              Help Center →
+            </a>
           </div>
         </div>
       </section>
@@ -992,7 +1093,6 @@
 
     <!-- ++++++++++++++++++ FOOTER +++++++++++++++++++++ -->
 
-    <!-- +++++++++++++++ FOOTER +++++++++++++++ -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-main">
@@ -1011,22 +1111,22 @@
 
               <a href="marketplace.html">Browse Products</a>
               <a href="orders.html">My Orders</a>
-              <a href="payments.html">Payments</a>
+              <a href="analysis.html">Analysis</a>
             </div>
 
             <div class="footer-column">
               <h3>Support</h3>
 
               <a href="support.html">Contact Support</a>
-              <a href="help.html">Help Center</a>
-              <a href="faq.html">FAQs</a>
+              <a href="mailto:support@agritrust.com">Help Center</a>
+              <a href="support.html">FAQs</a>
             </div>
 
             <div class="footer-column">
               <h3>Company</h3>
 
               <a href="about.html">About AgriTrust</a>
-              <a href="privacy.html">Privacy</a>
+              <a href="terms.html">Privacy</a>
               <a href="terms.html">Terms</a>
             </div>
           </div>
@@ -1036,13 +1136,13 @@
           <p>© 2026 AgriTrust. All rights reserved.</p>
 
           <div class="footer-bottom-links">
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="/JS/auth.js"></script>
+    <script src="JS/dashboard.js"></script>
   </body>
 </html>

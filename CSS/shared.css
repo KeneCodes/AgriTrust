@@ -71,22 +71,6 @@ body {
   color: var(--text-primary);
 }
 
-main {
-  padding: 2rem 3rem;
-  background-color: var(--surface-bg);
-  color: var(--text-primary);
-}
-
-section {
-  margin: 0 auto 4rem auto;
-  max-width: 124rem;
-  width: 100%;
-}
-
-section:last-child {
-  margin-bottom: 0;
-}
-
 /* +++++++ HYPERLINKS +++++++++ */
 
 a:link,
@@ -257,6 +241,8 @@ a:active {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+
+  position: relative;
 }
 
 .search-wrapper {
@@ -300,13 +286,19 @@ a:active {
   width: 4.5rem;
   height: 3rem;
   border-radius: 50%;
+  border: none;
   background-color: var(--text-primary);
   color: var(--surface-white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.avatar-wrapper:hover {
+  background-color: var(--text-secondary);
 }
 
 .notification--btn,
@@ -323,6 +315,40 @@ a:active {
 .notification--btn:hover {
   background-color: #16a34a2d;
 }
+
+.cart {
+  position: relative;
+  margin-right: 1rem;
+}
+
+#cart-count {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  color: var(--surface-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  border: none;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.2s ease;
+}
+
+/* Hide badge or change appearance when count is 0 */
+/* #cart-count:empty,
+#cart-count[data-count="0"] {
+  background-color: var(--text-muted);
+} */
 
 /* ++++++++++ PAGINATION ++++++++++++++++++= */
 
